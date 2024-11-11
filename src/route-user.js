@@ -7,9 +7,9 @@ const prod_router = Router();
 
 
 prod_router.post("/produto", (req, res) =>{
-    const {nome, validade, preco} = req.body;
+    const {nome, validade, preco, categoria} = req.body;
     conn.query(`insert into produtos(nome , validade, preco, categoria)
-        valeus ('${nome}', '${validade}','${preco }','${categoria}')`,(err,result) =>{
+        values ('${nome}', '${validade}','${preco }','${categoria}')`,(err,result) =>{
             if (err){
                 return res.json({
                     Erro: "Erro na inserção de dados," +err.message
@@ -34,4 +34,19 @@ prod_router.post("/lista", (req, res) =>{
         });
     });
 });
+prod_router.post("/atualizar", (req,res) => {
+    const {nome,validade,preco, categoria} = req.body;
+    conn.query(`update into produtos(nome, validade, preco, categoria)
+        values ('${nome},${validade},${preco},${categoria}')`, (err,result) =>{
+            if (err){
+                return res.json({
+                    Erro: "Erro ao atualizar dados !!!!" + err.massage
+                });
+            }
+            res.json({
+                Sucesso: `Produto ${nome} nome atualizado`
+            })
+        })
+
+})
 export{prod_router};
