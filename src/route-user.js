@@ -44,9 +44,22 @@ prod_router.post("/atualizar", (req,res) => {
                 });
             }
             res.json({
-                Sucesso: `Produto ${nome} nome atualizado`
-            })
-        })
+                Sucesso: `Produto ${nome}, nome atualizado`
+            });
+        });
 
+});
+prod_router.post('/deletar', (req,res) => {
+    const{nome, validade, preco, categoria} = req.body;
+    conn.query(`${nome},${validade}, ${preco},${categoria}`, (err,result) => {
+        if (err){
+            return res.json({
+                Erro: "Erro ao deletar dados !!!!" + err.massage
+            });
+        }
+        res.json({
+            Sucesso: `Produto ${nome}, apagado`
+        })
+    })
 })
 export{prod_router};
