@@ -21,20 +21,20 @@ prod_router.post("/produto", (req, res) => {
     });
 });
 
-// prod_router.post("/lista", (req, res) =>{
-//     conn.query('select * from produtos',(err,result) =>{
-//         if (err){
-//             res.json({
-//                 Erro: "Erro ao consultar dados !!!!" + err.message
-//             })
-//         }
-//         res.json(result);
+prod_router.get("/listar", (req,res) =>{
+    conn.query("select * from produtos", (err,result) =>{
+        if (err){
+            res.json({
+                Erro:"Erro a consultar os dados!!!"  +  err.message
+            })
+        }
+        res.json(result);
 
-//         result.map((item ) => {
-//             console.log(item.nome);
-//         });
-//     });
-// });
+        result.map((item) => {
+            console.log(item.nome)
+        })
+    })
+})
 
 // prod_router.post("/atualizar", (req,res) => {
 //     const {nome,validade,preco, categoria} = req.body;
