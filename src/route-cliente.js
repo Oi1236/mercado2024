@@ -6,7 +6,7 @@ const prod_router = Router();
 
 
 
-prod_router.post("/produto", (req, res) => {
+prod_router.post("/cliente", (req, res) => {
     const { nome, validade, preco, categoria } = req.body;
     conn.query(`insert into produtos(nome , validade, preco, categoria)
         values ('${nome}', '${validade}','${preco}','${categoria}')`, (err, result) => {
