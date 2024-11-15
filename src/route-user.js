@@ -5,7 +5,6 @@ import { conn } from "../src/mercado-bd.js"
 const prod_router = Router();
 
 
-
 prod_router.post("/produto", (req, res) => {
     const { nome, validade, preco, categoria } = req.body;
     conn.query(`insert into produtos(nome , validade, preco, categoria)
@@ -47,6 +46,8 @@ prod_router.post("/atualização", (req,res) => {
         });
     });
 });
+
+
 
 // prod_router.post("/deletar" , (res,req) =>{
 //     const {nome,validade,preco,categoria} = req.body;
