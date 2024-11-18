@@ -35,7 +35,14 @@ prod_router.get("/listar", (req,res) =>{
     });;
 });
 
+prod_router.put("/atualizar", (req,res) => {
+    const { produtos , id } = req.body;
 
+    conn.query(`update protudos  set ${id}, ${nome}, ${validade}, ${preco}, ${categoria}, ${preco}, ${peso} = 'produtos'
+        where id= ${id}`, (err) 
+        
+    )
+})
 
 
 
