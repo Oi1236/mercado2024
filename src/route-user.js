@@ -48,7 +48,19 @@ prod_router.put("/Atualizacao", (req,res) => {
         });
 });
 
+prod_router.delete("/Deletar", (req, res) => {
+    const {id_produto } = req.body;
 
+    conn.query(`delete from produtos where id_produto ='${id_produto}'`, (err, result) => {
+        if (err) {
+            return res.json("Erro ao deletar" +err.message)
+        }
+        res.json({
+            Deletado: "Produto deletado com sucesso"
+        });
+
+    });
+});
 
 
 export { prod_router };
