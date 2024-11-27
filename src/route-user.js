@@ -6,16 +6,16 @@ const prod_router = Router();
 
 
 prod_router.post("/produto", (req, res) => {
-    const { nome, validade, preco, categoria } = req.body;
-    conn.query(`insert into produtos(nome , validade, preco, categoria)
-        values ('${nome}', '${validade}','${preco}','${categoria}, '${peso}'')`, (err, result) => {
+    const { nome_produto, validade, preco_produto } = req.body;
+    conn.query(`insert into produtos(nome , validade, preco)
+        values ('${nome_produto}', '${validade}','${preco_produto}'}')`, (err, result) => {
         if (err) {
             return res.json({
                 Erro: "Erro na inserção de dados," + err.message
             });
         };
         res.json({
-            Sucesso: `Produto ${nome} cadastro com sucesso!`
+            Sucesso: `Produto ${nome_produto} cadastro com sucesso!`
         });
     });
 });
@@ -34,15 +34,20 @@ prod_router.get("/listar", (req,res) =>{
         });
     });;
 });
+prod_router.put("/Atualizacao", (req,res) => {
+    const{id, nome_produto, preco_produto, validade} = req.body;
 
-prod_router.put("/atualizar", (req,res) => {
-    const { produtos , id } = req.body;
+    conn.query(`update produtos set nome_produto = '${nome_produto}', preco_produto = '${preco_produto}', validade = '${validade}'
+        where id_produto=${id}`, (err,result) =>{
+            if(err){
+                return res.json("Errooooo: "+err.message)
+            }
+            res.json({
+                Edicao:"Produto alterado com sucesso"
+            });
+        });
+});
 
-    conn.query(`update protudos  set ${id}, ${nome}, ${validade}, ${preco}, ${categoria}, ${preco}, ${peso} = 'produtos'
-        where id= ${id}`, (err) 
-        
-    )
-})
 
 
 
