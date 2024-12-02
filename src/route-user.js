@@ -30,7 +30,7 @@ prod_router.get("/listar", (req,res) =>{
         res.json(result);
 
         result.map((item) => {
-            console.log(item.nome)
+            console.log(item.nome_produto)
         });
     });;
 });

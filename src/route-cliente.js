@@ -18,4 +18,22 @@ client_router.post("/client", (req, res) => {
     });
 });
 
+client_router.get("/listar_cliente", (req,res) =>{
+    conn.query("select * from cliente", (err,result) =>{
+        if (err){
+            res.json({
+                Erro:"Erro ao consultar os dados!!!"  +  err.message
+            })
+        }
+        res.json(result);
+
+        result.map((item) => {
+            console.log(item.nome_cliente)
+        });
+    });;
+});
+
+client_router.put("/")
+
+
 export {client_router}
