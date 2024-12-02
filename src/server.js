@@ -1,5 +1,5 @@
 import express, { Router } from "express"
-import { prod_router } from "./route-user.js";
+import { prod_router } from "./route-prod.js";
 import { client_router } from "./route-cliente.js"
 
 
@@ -13,3 +13,5 @@ app.use(client_router);
 
 
 app.listen(3333, () => console.log('Servidor rodando...'));
+
+

@@ -4,18 +4,17 @@ import { conn } from "../src/mercado-bd.js"
 
 const prod_router = Router();
 
-
 prod_router.post("/produto", (req, res) => {
-    const { nome_produto, validade, preco_produto } = req.body;
-    conn.query(`insert into produtos(nome , validade, preco)
-        values ('${nome_produto}', '${validade}','${preco_produto}'}')`, (err, result) => {
+    const {nome_produto, preco_produto, validade} = req.body;
+    conn.query(`insert into produtos( nome_produto, preco_produto, validade)
+        values ('${nome_produto}', '${preco_produto}','${validade}'}')`, (err, result) => {
         if (err) {
             return res.json({
-                Erro: "Erro na inserção de dados," + err.message
+                Erro: "Erro no cadastro do cliente" + err.message
             });
         };
         res.json({
-            Sucesso: `Produto ${nome_produto} cadastro com sucesso!`
+            Sucesso: `Cliente ${nome_cliente} cadastrado com sucesso!`
         });
     });
 });
@@ -35,10 +34,10 @@ prod_router.get("/listar", (req,res) =>{
     });;
 });
 prod_router.put("/Atualizacao", (req,res) => {
-    const{id, nome_produto, preco_produto, validade} = req.body;
+    const{id_produto, nome_produto, preco_produto, validade} = req.body;
 
-    conn.query(`update produtos set nome_produto = '${nome_produto}', preco_produto = '${preco_produto}', validade = '${validade}'
-        where id_produto=${id}`, (err,result) =>{
+    conn.query(`update produtos set nome_produto='${nome_produto}', preco_produto='${preco_produto}', validade='${validade}'
+        where id_produto=${id_produto}`, (err,result) =>{
             if(err){
                 return res.json("Errooooo: "+err.message)
             }

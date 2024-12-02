@@ -33,7 +33,19 @@ client_router.get("/listar_cliente", (req,res) =>{
     });;
 });
 
-client_router.put("/")
+client_router.put("/Atualizacao_cliente", (req,res) => {
+    const{id, cpf_cliente, nome_cliente, telef_cliente, endereco_cliente} = req.body;
+
+    conn.query(`update cliente set cpf_cliente = '${cpf_cliente}', nome_cliente = '${nome_cliente}', telef_cliente = '${telef_cliente}, end = ${endereco_cliente}'
+        where id_cliente=${id}`, (err,result) =>{
+            if(err){
+                return res.json("Errooooo: "+err.message)
+            }
+            res.json({
+                Edicao:"Atualização realizada"
+            });
+        });
+});
 
 
 export {client_router}
