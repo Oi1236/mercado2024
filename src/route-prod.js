@@ -10,11 +10,11 @@ prod_router.post("/produto", (req, res) => {
         values ('${nome_produto}', '${preco_produto}','${validade}'}')`, (err, result) => {
         if (err) {
             return res.json({
-                Erro: "Erro no cadastro do cliente" + err.message
+                Erro: "Erro na inserção de produtos" + err.message
             });
         };
         res.json({
-            Sucesso: `Cliente ${nome_cliente} cadastrado com sucesso!`
+            Sucesso: `Produto ${nome_cliente} cadastrado com sucesso!`
         });
     });
 });
