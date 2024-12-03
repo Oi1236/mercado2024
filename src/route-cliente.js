@@ -48,4 +48,17 @@ client_router.put("/Atualizacao_cliente", (req,res) => {
 });
 
 
-export {client_router}
+client_router.delete("/deletacao_cliente", (req, res) => {
+    const {id_cliente} = req.body;
+
+    conn.query(`delete from cliente where id_cliente = '${id_cliente}'` , (err, result) => {
+        if (err) {
+            return res.json("Erro ao deletar " +err.message)
+        }
+        res.json({
+            delete:"deu certo"
+        });
+    });
+});
+
+export {client_router};

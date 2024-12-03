@@ -7,14 +7,14 @@ const prod_router = Router();
 prod_router.post("/produto", (req, res) => {
     const {nome_produto, preco_produto, validade} = req.body;
     conn.query(`insert into produtos( nome_produto, preco_produto, validade)
-        values ('${nome_produto}', '${preco_produto}','${validade}'}')`, (err, result) => {
+        values ('${nome_produto}', '${preco_produto}','${validade}')`, (err, result) => {
         if (err) {
             return res.json({
                 Erro: "Erro na inserção de produtos" + err.message
             });
         };
         res.json({
-            Sucesso: `Produto ${nome_cliente} cadastrado com sucesso!`
+            Sucesso: `Produto ${nome_produto} cadastrado com sucesso!`
         });
     });
 });
