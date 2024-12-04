@@ -4,16 +4,16 @@ import { conn } from  "../src/mercado-bd.js";
 const client_router = Router()
 
 client_router.post("/client", (req, res) => {
-    const {cpf_cliente, nome_cliente, telef_cliente, endereco_cliente} = req.body;
+    const {cpf, nome, telef, endereco} = req.body;
     conn.query(`insert into cliente(cpf_cliente, nome_cliente, telef_cliente, endereco_cliente)
-        values ('${cpf_cliente}', '${nome_cliente}','${telef_cliente}', '${endereco_cliente}}')`, (err, result) => {
+        values ('${cpf}', '${nome}','${telef}', '${endereco}')`, (err, result) => {
         if (err) {
             return res.json({
                 Erro: "Erro no cadastro do cliente" + err.message
             });
         };
         res.json({
-            Sucesso: `Cliente ${nome_cliente} cadastrado com sucesso!`
+            Sucesso: `Cliente ${nome} cadastrado com sucesso!`
         });
     });
 });
@@ -34,9 +34,9 @@ client_router.get("/listar_cliente", (req,res) =>{
 });
 
 client_router.put("/Atualizacao_cliente", (req,res) => {
-    const{id, cpf_cliente, nome_cliente, telef_cliente, endereco_cliente} = req.body;
+    const{id, cpf_cliente, nome_cliente, telef_cliente, endereco} = req.body;
 
-    conn.query(`update cliente set cpf_cliente = '${cpf_cliente}', nome_cliente = '${nome_cliente}', telef_cliente = '${telef_cliente}, end = ${endereco_cliente}'
+    conn.query(`update cliente set cpf_cliente = '${cpf_cliente}', nome_cliente = '${nome_cliente}', telef_cliente = '${telef_cliente}', endereco_cliente = ' ${endereco}'
         where id_cliente=${id}`, (err,result) =>{
             if(err){
                 return res.json("Errooooo: "+err.message)
