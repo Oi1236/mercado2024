@@ -49,4 +49,17 @@ estoque_router.put("/up_estoque", (req,res) => {
 });
 
 
+estoque_router.delete("/deletar_estoque", (req, res) => {
+    const {id_estoque} = req.body;
+ 
+    conn.query(`delete from estoque where id_estoque = '${id_estoque}'` , (err, result) => {
+        if (err) {
+            return res.json("Erro ao deletar " +err.message)
+        }
+        res.json({
+            delete:"deu certo"
+        });
+    });
+});
+
 export {estoque_router};
