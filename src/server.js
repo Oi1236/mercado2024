@@ -4,6 +4,7 @@ import { client_router } from "./route-cliente.js"
 import {estoque_router} from "./router-estoque.js"
 import {func_router} from "./router-funcionarios.js"
 import { ven_router} from "./router-vendas.js"
+import { fornec_router} from "./router-fornecedores.js"
 
 
 const app = express();
@@ -14,7 +15,7 @@ app.use(client_router);
 app.use(estoque_router);
 app.use(func_router);
 app.use(ven_router);
-
+app.use(fornec_router);
 
 
 

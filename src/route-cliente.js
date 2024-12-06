@@ -6,7 +6,7 @@ const client_router = Router()
 client_router.post("/cliente", (req, res) => {
     const {cpf_cliente, nome_cliente, telef_cliente, endereco_cliente} = req.body;
     conn.query(`insert into cliente(cpf_cliente, nome_cliente, telef_cliente, endereco_cliente)
-        values ('${cpf_cliente}', '${nome_cliente}','${telef_cliente}', ${endereco_cliente})`, (err, result) => {
+        values ('${cpf_cliente}', '${nome_cliente}','${telef_cliente}',' ${endereco_cliente}')`, (err, result) => {
         if (err) {
             return res.json({
                 Erro: "Erro no cadastro do cliente" + err.message
@@ -17,6 +17,7 @@ client_router.post("/cliente", (req, res) => {
         });
     });
 });
+
 
 client_router.get("/listar_cliente", (req,res) =>{
     conn.query("select * from cliente", (err,result) =>{

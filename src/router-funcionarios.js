@@ -36,7 +36,7 @@ func_router.get("/listar_func", (req,res) =>{
 func_router.put("/Atualizacao_func", (req,res) => {
     const{id_func, cpf_func, nome_func, cargo_func, salario_func, telef_func} = req.body;
 
-    conn.query(`update funcionarios set  cpf_func= '${cpf_func}, nome_func='${nome_func}', cargo_func ='${cargo_func} salario_func ='${salario_func}', telef_func='${telef_func}'
+    conn.query(`update funcionarios set cpf_func= '${cpf_func}', nome_func='${nome_func}', cargo_func ='${cargo_func}', salario_func ='${salario_func}', telef_func='${telef_func}'
         where id_func=${id_func}`, (err,result) =>{
             if(err){
                 return res.json("Errooooo: "+err.message)
