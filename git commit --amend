@@ -1,0 +1,174 @@
+[33mcommit 4ae26803cc988c31e8e3b12b99e4d422223ec923[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Fri Dec 6 08:24:22 2024 -0300
+
+    Correção dos erros
+
+[33mcommit b61ac5f33d612ed0f7e68fb7d62ab61c808a4297[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Thu Dec 5 20:55:16 2024 -0300
+
+    vendas
+
+[33mcommit 69b4f92fd1311e3af315d549ec21c84cbdfb79cd[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Thu Dec 5 20:35:28 2024 -0300
+
+    funcionários
+
+[33mcommit 962c63358a033459f6a3ba106396d36451863cd1[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Dec 4 22:02:00 2024 -0300
+
+    Deletar estoque
+
+[33mcommit 0b548ac365aaed39a0a6ac32953ef845e72b3b45[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Dec 4 17:00:33 2024 -0300
+
+    Revendo algumas funcionalidade
+
+[33mcommit 8d157f3af3941856c5dbe8794daa7090f8f9f304[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Tue Dec 3 11:21:48 2024 -0300
+
+    Feita a parte de estoque
+
+[33mcommit 58b16150ea25943bbb3f4c7adaa8e5cdde43949f[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Tue Dec 3 08:41:54 2024 -0300
+
+    Adicionado a função de deletar o cliente
+
+[33mcommit ca4ab634a78532f208eeda375ebdc64a13eeece2[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Dec 2 14:14:13 2024 -0300
+
+    Funções em manutenção
+
+[33mcommit 657cfdc28f6dc84f4fdffa255d6b02ca579b462b[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Dec 2 14:10:19 2024 -0300
+
+    Correção das funcões
+
+[33mcommit 5af4ef36a1b8f4c25a2e00f30bd676601616f8df[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Dec 2 10:20:40 2024 -0300
+
+    Seleção de clientes foi feita
+
+[33mcommit 483241ca0dc6036eb4a52dccfbd9db6b3928b6b2[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Dec 2 09:56:12 2024 -0300
+
+    Cadastrar o cliente
+
+[33mcommit e3a2fcad24829349513cb10210e9aade46a14d2e[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Nov 27 14:03:26 2024 -0300
+
+    Função de deletar
+
+[33mcommit e0b9cd9c561f34693f0844eed4a294827768caf5[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Nov 27 11:52:12 2024 -0300
+
+    A função de atualizar
+
+[33mcommit 9bd5f3bd52d7528837bd771d07a4024fc8ee4bdc[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Nov 18 10:09:59 2024 -0300
+
+    Novas funções
+
+[33mcommit 8970518c8cd9af8bda08dfc0885c2ff0585944b5[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Sun Nov 17 19:27:37 2024 -0300
+
+    Testes
+
+[33mcommit 0cf7e2d54fac3c5601702919f42bd1f5f908c472[m
+Merge: d9f82b9 59d0172
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Fri Nov 15 13:54:32 2024 -0300
+
+    erro ao subit codigo
+
+[33mcommit d9f82b9fad5127db212f199cfd1571920cce66b6[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Fri Nov 15 13:38:49 2024 -0300
+
+    af
+
+[33mcommit 59d01724bdef6fff39179cab73b1dcf8a16a37de[m
+Author: Oi1236 <152931320+Oi1236@users.noreply.github.com>
+Date:   Thu Nov 14 14:15:22 2024 -0300
+
+    Delete src/route-cliente.js
+
+[33mcommit f4985e6dc2093b0655ca99447049a8869c204a37[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Thu Nov 14 14:11:30 2024 -0300
+
+    Alogo foi removido
+
+[33mcommit b2ba4b77c09d72e1ec6d324091a7e2bcba72a7cd[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Nov 13 22:34:19 2024 -0300
+
+    cliente
+
+[33mcommit f7848a00be2e8cbaa93ae99bc59e500444ebe6f3[m
+Author: Oi1236 <152931320+Oi1236@users.noreply.github.com>
+Date:   Wed Nov 13 22:20:29 2024 -0300
+
+    Create route-cliente.js
+
+[33mcommit 6f3a8bb1fc8e1319abc222b7ddaf4f2989b64684[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Nov 13 14:08:17 2024 -0300
+
+    A aplicação de consuta de dados
+
+[33mcommit 37b6f11c5903e5fa97e73bf227c9b39c5cf8e078[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Wed Nov 13 12:02:18 2024 -0300
+
+    Correção de todo o código
+
+[33mcommit 3c7ade174bdbf39914ef124ac935cc4d221041ff[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Tue Nov 12 13:27:05 2024 -0300
+
+    Adicionado a função de deletar um produto
+
+[33mcommit 261ba83d45ca71565ee31297c5b1d7bcb8b066ca[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Nov 11 15:50:06 2024 -0300
+
+    Foi inserido a forma de atualização
+
+[33mcommit 8681691a7d0be7f610d97ab4335b62821c33638a[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Nov 11 14:41:12 2024 -0300
+
+    Foi adicionado a parte de seleção
+
+[33mcommit bb3c931b6939f96864bc590c94758bbdd642bbd5[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Nov 11 12:56:30 2024 -0300
+
+    router dos produtos
+
+[33mcommit 81586ce2d9e87bac0cc509cf69011e27c0d2f5aa[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Nov 11 12:19:36 2024 -0300
+
+    servidor do projeto
+
+[33mcommit 25fb9930ad8a6cd43fd249db38257946f0fef6ba[m
+Author: Alessandro <alessandrofrancisco729@gmail.com>
+Date:   Mon Nov 11 10:56:50 2024 -0300
+
+    banco de dados
